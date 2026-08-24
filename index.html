@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>千寻OPC日报 | 2026-08-25 | 一人公司生态每日动态</title>
+<meta name="description" content="千寻OPC日报 - 2026年8月25日 - 一人公司(OPC)生态每日动态，涵盖政策、社区、工具平台最新资讯">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --primary:#0891b2;--secondary:#06b6d4;--accent:#f0fcfe;
+    --bg:#f0fdfa;--dark:#0e7490;--gradient:linear-gradient(135deg,#0891b2,#06b6d4);
+    --text:#1a2e35;--text-light:#5a7a85;--card:#ffffff;--border:#e0f2f7;
+  }
+  body{font-family:'PingFang SC','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* Hero */
+  .hero{background:var(--gradient);color:#fff;padding:50px 0 40px;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,0.08)}
+  .hero::after{content:'';position:absolute;bottom:-30%;left:-5%;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.06)}
+  .hero-inner{position:relative;z-index:1}
+  .hero .brand{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:0.85;margin-bottom:8px}
+  .hero h1{font-size:36px;font-weight:700;margin-bottom:6px;letter-spacing:1px}
+  .hero .subtitle{font-size:16px;opacity:0.9;margin-bottom:16px}
+  .hero .meta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:14px}
+  .hero .meta .badge{background:rgba(255,255,255,0.2);padding:4px 14px;border-radius:20px;backdrop-filter:blur(4px)}
+  .hero .meta .date{font-size:22px;font-weight:600}
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin:-30px 0 36px;position:relative;z-index:2}
+  .stat-card{background:var(--card);border-radius:12px;padding:18px 16px;text-align:center;box-shadow:0 4px 20px rgba(8,145,178,0.1);border:1px solid var(--border)}
+  .stat-card .num{font-size:28px;font-weight:700;color:var(--primary);line-height:1.2}
+  .stat-card .label{font-size:12px;color:var(--text-light);margin-top:4px}
+
+  /* Section */
+  .section{margin-bottom:36px}
+  .section-title{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+  .section-title .icon{width:28px;height:28px;background:var(--gradient);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;flex-shrink:0}
+
+  /* News Card */
+  .news-card{background:var(--card);border-radius:12px;padding:22px 24px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,0.04);border:1px solid var(--border);transition:transform 0.2s,box-shadow 0.2s}
+  .news-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(8,145,178,0.12)}
+  .news-card .cat{display:inline-block;font-size:11px;font-weight:600;color:var(--primary);background:var(--accent);padding:3px 10px;border-radius:6px;margin-bottom:8px}
+  .news-card h3{font-size:17px;font-weight:600;line-height:1.5;margin-bottom:8px;color:var(--text)}
+  .news-card .info{display:flex;gap:12px;font-size:12px;color:var(--text-light);margin-bottom:10px;flex-wrap:wrap}
+  .news-card .info span::before{content:'·';margin-right:6px}
+  .news-card .info span:first-child::before{content:'';margin:0}
+  .news-card .summary{font-size:14px;color:#3a5057;line-height:1.75}
+  .news-card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+  .news-card .tag{font-size:11px;color:var(--secondary);background:#ecfeff;padding:2px 8px;border-radius:4px;border:1px solid #cffafe}
+
+  /* Theme showcase */
+  .theme-strip{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}
+  .theme-dot{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:600;cursor:default;transition:transform 0.2s}
+  .theme-dot:hover{transform:scale(1.15)}
+  .theme-dot.active{outline:3px solid var(--dark);outline-offset:2px}
+
+  /* Footer */
+  .footer{text-align:center;padding:30px 0 40px;color:var(--text-light);font-size:13px;border-top:1px solid var(--border);margin-top:20px}
+  .footer .theme-note{background:var(--accent);border-radius:10px;padding:12px 20px;margin-bottom:16px;display:inline-block;font-size:13px;color:var(--dark)}
+  .footer a{color:var(--primary);text-decoration:none}
+  .footer a:hover{text-decoration:underline}
+
+  @media(max-width:600px){
+    .hero h1{font-size:26px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .news-card{padding:16px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="brand">QIANXUN · OPC DAILY</div>
+    <h1>千寻OPC日报</h1>
+    <div class="subtitle">一人公司(OPC)生态每日动态</div>
+    <div class="meta">
+      <span class="date">2026-08-25</span>
+      <span class="badge">星期二</span>
+      <span class="badge">今日主题：清新青</span>
+      <span class="badge">第 7/7 套</span>
+    </div>
+  </div>
+</header>
+
+<!-- Stats -->
+<div class="container">
+  <div class="stats">
+    <div class="stat-card"><div class="num">426</div><div class="label">全国OPC社区</div></div>
+    <div class="stat-card"><div class="num">28</div><div class="label">覆盖省份</div></div>
+    <div class="stat-card"><div class="num">65</div><div class="label">覆盖城市</div></div>
+    <div class="stat-card"><div class="num">5+</div><div class="label">本周新政</div></div>
+    <div class="stat-card"><div class="num">500万</div><div class="label">最高创业贷</div></div>
+  </div>
+
+  <!-- 政策动态 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">政</span>政策动态</div>
+
+    <div class="news-card">
+      <span class="cat">政策动态</span>
+      <h3>重庆发布「未来星」OPC创业生态十条措施</h3>
+      <div class="info"><span>重庆市市场监管局</span><span>2026-08-19</span></div>
+      <div class="summary">市市场监管局、市知识产权局联合制发《服务打造「未来星」OPC创业生态十条措施》，涵盖全域零成本极速开办、支持工位注册与一址多照、探索企标通办集成服务等，构建「准入更便捷、服务更精准、监管更包容」的创业生态。依托「渝企在线」应用开设OPC创业专区，提供智能申报服务，放宽社区「一址多照」监测预警阈值。</div>
+      <div class="tags"><span class="tag">重庆</span><span class="tag">十条措施</span><span class="tag">零成本开办</span><span class="tag">工位注册</span></div>
+    </div>
+
+    <div class="news-card">
+      <span class="cat">政策动态</span>
+      <h3>陕西出台指导意见支持OPC业态创业发展</h3>
+      <div class="info"><span>陕西省市场监管局</span><span>2026-08-13</span></div>
+      <div class="summary">陕西省市场监管局印发《关于支持OPC业态创业发展的指导意见》，从创业政策供给、服务保障、合规风险防控「三创」协同推出十四条暖心举措。探索设立OPC登记注册专区、一址多照、工位注册；建立「一企一户」专属信用档案，推动跨领域信用结果互认、融资贷款采信；对非主观轻微偶发问题采用「首违不罚」柔性举措。</div>
+      <div class="tags"><span class="tag">陕西</span><span class="tag">十四条</span><span class="tag">信用档案</span><span class="tag">首违不罚</span></div>
+    </div>
+
+    <div class="news-card">
+      <span class="cat">政策动态</span>
+      <h3>安徽出台省级OPC专项行动方案：三年培育3000支创业团队</h3>
+      <div class="info"><span>安徽省科技厅、省人社厅</span><span>2026-08-05</span></div>
+      <div class="summary">联合印发《安徽省推进人工智能OPC创新创业发展行动方案(2026—2028年)》，目标建成30个省级OPC社区、集聚3000支创业团队、带动万人就业。硬核扶持：省级社区最高500万元建设补助；算力补贴20%、可叠加Token补贴；创新Token贷、模型贷、知识产权质押；政府采购预付款最低四成；高校科研人员离岗创办OPC可保留3年人事关系；AI训练师培训补贴上浮两成。</div>
+      <div class="tags"><span class="tag">安徽</span><span class="tag">三年方案</span><span class="tag">3000团队</span><span class="tag">Token贷</span><span class="tag">模型贷</span></div>
+    </div>
+
+    <div class="news-card">
+      <span class="cat">政策动态</span>
+      <h3>山东12部门联合发文支持OPC：三年百载体千主体万人才</h3>
+      <div class="info"><span>山东省工信厅等12部门</span><span>2026-08-04</span></div>
+      <div class="summary">联合印发《关于支持人工智能OPC创新发展的行动方案》，明确力争3年内建成百个定位清晰的特色载体、培育千家技术领先的创业主体、集聚万名优秀OPC创新人才。与安徽、重庆、云南等地形成省级OPC政策密集出台态势，系统化破解AI个体创业初期的资金压力、算力成本、人才缺口等基础痛点。</div>
+      <div class="tags"><span class="tag">山东</span><span class="tag">12部门</span><span class="tag">百千工程</span></div>
+    </div>
+
+    <div class="news-card">
+      <span class="cat">政策动态</span>
+      <h3>湖北出台12条措施支持OPC：最高500万元创业担保贷款</h3>
+      <div class="info"><span>湖北省政府办公厅</span><span>2026-05-16</span></div>
+      <div class="summary">印发《湖北省支持人工智能OPC发展若干措施(试行)》，从服务生态、要素保障、资本支撑、成果转化四方面出台12条措施。OPC生态社区最高500万元资金支持；省级首期2000万元算力支持，单家OPC最高3000元卡时或token免费算力；算力券按30%发放最高10万元；创业担保贷款最高500万元，按50%贴息。</div>
+      <div class="tags"><span class="tag">湖北</span><span class="tag">12条</span><span class="tag">500万贷款</span><span class="tag">算力券</span></div>
+    </div>
+  </div>
+
+  <!-- 社区建设 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">社</span>社区建设</div>
+
+    <div class="news-card">
+      <span class="cat">社区建设</span>
+      <h3>北京推动OPC从「孤岛」走向「群岛」</h3>
+      <div class="info"><span>中国高新</span><span>2026-08-24</span></div>
+      <div class="summary">北京正形成稳定的OPC生态支持体系，用真金白银和全链条服务推动OPC从「孤岛」走向「群岛」。亦庄首批8家OPC社区正式挂牌，上线全国首个「模型券」即时补贴平台、30分钟极速企业注册，年投放超3亿元算力券/数据券/模型券即用即补。海淀发布北京首个人工智能「OPC服务计划」，石景山发布OPC创业生态政策聚焦AI+科幻游戏。亦庄搭建「上下楼即上下游」微孵化协作网络，每年投放不少于100个订单破解「有技术无场景」痛点。</div>
+      <div class="tags"><span class="tag">北京</span><span class="tag">亦庄</span><span class="tag">模型券</span><span class="tag">微孵化</span><span class="tag">100订单</span></div>
+    </div>
+
+    <div class="news-card">
+      <span class="cat">社区建设</span>
+      <h3>武汉全方位支持OPC：最高100万元创业资助+算力贷</h3>
+      <div class="info"><span>武汉市科创局</span><span>2026-02-25</span></div>
+      <div class="summary">设立市级算力服务券，对OPC算力费用给予50%最高20万元最长3年补助；社区每年提供不少于2000卡时免费算力。利用数据产品研发给予最高200万元补助；垂直模型按研发成本30%给予最高500万元补助。联合银行推出最高1000万元「算力贷」、80%风险补偿；为OPC人才提供最高10万元购房补贴；每年挖掘不少于100个OPC典型应用场景。</div>
+      <div class="tags"><span class="tag">武汉</span><span class="tag">100万资助</span><span class="tag">算力贷</span><span class="tag">数据补助</span></div>
+    </div>
+
+    <div class="news-card">
+      <span class="cat">社区建设</span>
+      <h3>上海四区OPC政策全面落地：零租金+三券+落户通道</h3>
+      <div class="info"><span>人民网上海频道</span><span>2026-03-12</span></div>
+      <div class="summary">临港新片区超级个体288行动：前3年零租金办公+住宿、算力补贴最高50万、融资最高500万、创业担保贷最高80万、直接落户通道，聚焦硬科技、数据加工、跨境直播8类。徐汇北杨AI小镇首年工位全免、优秀再免1年，算力/模型/语料三券每项最高100万。杨浦复兴岛人才公寓月租<1000元、AI工具集+Tokens服务、创新券最高20万/年。浦东张江新注册OPC最高30万免费算力。</div>
+      <div class="tags"><span class="tag">上海</span><span class="tag">临港288</span><span class="tag">三券</span><span class="tag">落户通道</span></div>
+    </div>
+
+    <div class="news-card">
+      <span class="cat">社区建设</span>
+      <h3>南京江宁麒麟科创园发布OPC专项政策</h3>
+      <div class="info"><span>南京市江宁区政府</span><span>2026-07-16</span></div>
+      <div class="summary">麒麟科创园发布《支持OPC企业发展的若干政策》(2026年版)，给予新注册OPC企业5万元创业启动奖励、最高30万元/年算力券、关键技术项目最高50万元/年补贴，配套人才房租金补贴30%~100%。江宁开发区、高新区为入驻OPC社区企业提供免租工位、免费AI工具授权、免费培训课程，同步提供工商注册、投融资对接、出海渠道拓展等一站式全链条服务。联动东南大学、南京理工等高校开放实验室与科研数据。</div>
+      <div class="tags"><span class="tag">南京</span><span class="tag">麒麟科创园</span><span class="tag">5万启动</span><span class="tag">30万算力券</span></div>
+    </div>
+  </div>
+
+  <!-- 数据洞察 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">数</span>数据洞察</div>
+
+    <div class="news-card">
+      <span class="cat">数据洞察</span>
+      <h3>复旦大学报告：全国426个OPC社区覆盖28省65城</h3>
+      <div class="info"><span>复旦大学新闻学院姚建华教授团队</span><span>2026-08-24</span></div>
+      <div class="summary">《2026年中国一人公司(OPC)调研报告》显示，截至2026年5月全国共有426个OPC社区，覆盖28个省级行政区和65个城市。北京正逐渐形成稳定的OPC生态支持体系，用真金白银和全链条服务推动OPC从「孤岛」走向「群岛」。扶持方式正从「直接给钱」升级为「给生态、给场景、给订单」，解决AI超级个体「有技术无场景、有创意无市场」的核心痛点。</div>
+      <div class="tags"><span class="tag">复旦报告</span><span class="tag">426社区</span><span class="tag">28省65城</span><span class="tag">群岛</span></div>
+    </div>
+  </div>
+
+  <!-- Theme Showcase -->
+  <div class="section">
+    <div class="section-title"><span class="icon">色</span>7套主题轮换</div>
+    <div class="news-card">
+      <div class="summary" style="margin-bottom:12px">本日报采用 7 套视觉主题按日轮换，每天自动切换，7 天一循环。今日为第 7 套「清新青」。</div>
+      <div class="theme-strip">
+        <div class="theme-dot" style="background:linear-gradient(135deg,#1a73e8,#4285f4)" title="科技蓝">1</div>
+        <div class="theme-dot" style="background:linear-gradient(135deg,#e85d04,#fa8322)" title="活力橙">2</div>
+        <div class="theme-dot" style="background:linear-gradient(135deg,#2d8659,#3da876)" title="自然绿">3</div>
+        <div class="theme-dot" style="background:linear-gradient(135deg,#7b2d8e,#a855c0)" title="优雅紫">4</div>
+        <div class="theme-dot" style="background:linear-gradient(135deg,#4a5568,#718096)" title="沉稳灰">5</div>
+        <div class="theme-dot" style="background:linear-gradient(135deg,#c0392b,#e74c3c)" title="热情红">6</div>
+        <div class="theme-dot active" style="background:linear-gradient(135deg,#0891b2,#06b6d4)" title="清新青(今日)">7</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="theme-note">今日主题：清新青 · 共 7 套风格按日轮换</div>
+    <p>千寻OPC日报 · 一人公司(OPC)生态每日动态</p>
+    <p style="margin-top:4px">数据来源：政府官网、权威媒体、学术机构公开报道</p>
+    <p style="margin-top:8px"><a href="https://github.com/fcy123cpu/qianxun-opc-daily">github.com/fcy123cpu/qianxun-opc-daily</a></p>
+    <p style="margin-top:4px;opacity:0.6">Generated: 2026-08-25 | Theme #7/7 清新青</p>
+  </div>
+</footer>
+
+</body>
+</html>
