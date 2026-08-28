@@ -3,231 +3,281 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>千寻OPC日报 | 2026-08-28 | 一人公司生态每日动态</title>
-<meta name="description" content="千寻OPC日报 - 2026年8月28日 - 一人公司(OPC)生态每日动态，涵盖政策、社区、工具平台、数据洞察最新资讯">
+<title>千寻智创OPC社区今日简讯 | 2026-08-28</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --primary:#2d8659;--secondary:#3da876;--accent:#f0faf3;
-    --bg:#f5fcf8;--dark:#1f6041;--gradient:linear-gradient(135deg,#2d8659,#3da876);
-    --text:#1a2e25;--text-light:#5a7a6a;--card:#ffffff;--border:#e0f2e7;
-  }
-  body{font-family:'PingFang SC','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
-  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  body{font-family:'PingFang SC','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;background:#f2f3f5;color:#1f2937;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .page{max-width:860px;margin:0 auto;background:#ffffff;min-height:100vh}
 
-  /* Hero */
-  .hero{background:var(--gradient);color:#fff;padding:50px 0 40px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,0.08)}
-  .hero::after{content:'';position:absolute;bottom:-30%;left:-5%;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.06)}
-  .hero-inner{position:relative;z-index:1}
-  .hero .brand{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:0.85;margin-bottom:8px}
-  .hero h1{font-size:36px;font-weight:700;margin-bottom:6px;letter-spacing:1px}
-  .hero .subtitle{font-size:16px;opacity:0.9;margin-bottom:16px}
-  .hero .meta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:14px}
-  .hero .meta .badge{background:rgba(255,255,255,0.2);padding:4px 14px;border-radius:20px;backdrop-filter:blur(4px)}
-  .hero .meta .date{font-size:22px;font-weight:600}
+  /* ===== 头部 ===== */
+  .header{padding:34px 32px 26px;background:linear-gradient(135deg,#2d8659,#3da876);color:#fff;position:relative;overflow:hidden}
+  .header .brand{font-size:12px;letter-spacing:3px;font-weight:600;opacity:0.92;margin-bottom:10px}
+  .header h1{font-size:30px;font-weight:800;letter-spacing:1px;margin-bottom:10px}
+  .header .date{font-size:15px;opacity:0.95;margin-bottom:16px}
+  .header .count{display:inline-block;background:rgba(255,255,255, 0.18);padding:8px 16px;border-radius:30px;font-size:14px;font-weight:600}
+  .header .count b{font-size:18px}
 
-  /* Stats */
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin:-30px 0 36px;position:relative;z-index:2}
-  .stat-card{background:var(--card);border-radius:12px;padding:18px 16px;text-align:center;box-shadow:0 4px 20px rgba(45,134,89,0.1);border:1px solid var(--border)}
-  .stat-card .num{font-size:26px;font-weight:700;color:var(--primary);line-height:1.2}
-  .stat-card .label{font-size:12px;color:var(--text-light);margin-top:4px}
+  /* ===== 板块 ===== */
+  .body{padding:24px 32px 40px}
+  .section{margin-bottom:26px}
+  .sec-head{display:flex;align-items:center;gap:10px;color:#fff;font-size:17px;font-weight:700;padding:11px 16px;border-radius:10px;margin-bottom:14px}
+  .sec-head .no{font-size:13px;background:rgba(255,255,255,0.25);border-radius:6px;padding:2px 8px;font-weight:800}
 
-  /* Section */
-  .section{margin-bottom:36px}
-  .section-title{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:600;color:var(--dark);margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)}
-  .section-title .icon{width:28px;height:28px;background:var(--gradient);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;flex-shrink:0}
+  .card{display:flex;gap:14px;background:#fcfcfd;border:1px solid #eceef1;border-radius:12px;padding:16px 18px;margin-bottom:12px;transition:transform .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+  .card .num{flex-shrink:0;width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px}
+  .card .main{flex:1;min-width:0}
+  .card .title{font-size:15.5px;font-weight:700;line-height:1.5;margin-bottom:6px}
+  .card .title a{color:#1a73e8;text-decoration:none;cursor:pointer}
+  .card .title a:hover{text-decoration:underline}
+  .card .desc{font-size:13.5px;color:#4b5563;line-height:1.7;margin-bottom:8px}
+  .card .src{display:inline-block;font-size:12px;color:#6b7280;background:#f1f3f5;border-radius:6px;padding:3px 10px}
 
-  /* News Card */
-  .news-card{background:var(--card);border-radius:12px;padding:22px 24px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,0.04);border:1px solid var(--border);transition:transform 0.2s,box-shadow 0.2s}
-  .news-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(45,134,89,0.12)}
-  .news-card .cat{display:inline-block;font-size:11px;font-weight:600;color:var(--primary);background:var(--accent);padding:3px 10px;border-radius:6px;margin-bottom:8px}
-  .news-card h3{font-size:17px;font-weight:600;line-height:1.5;margin-bottom:8px;color:var(--text)}
-  .news-card .info{display:flex;gap:12px;font-size:12px;color:var(--text-light);margin-bottom:10px;flex-wrap:wrap}
-  .news-card .info span::before{content:'·';margin-right:6px}
-  .news-card .info span:first-child::before{content:'';margin:0}
-  .news-card .summary{font-size:14px;color:#3a5047;line-height:1.75}
-  .news-card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
-  .news-card .tag{font-size:11px;color:var(--secondary);background:#f0fdf4;padding:2px 8px;border-radius:4px;border:1px solid #dcfce7}
+  /* ===== 分享 ===== */
+  .share-bar{display:flex;gap:12px;justify-content:center;padding:10px 0 0}
+  .btn{background:linear-gradient(135deg,#2d8659,#3da876);color:#fff;border:none;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 4px 14px rgba(45,134,89,0.25)}
+  .btn:hover{opacity:0.92}
+  .btn.ghost{background:#fff;color:#2d8659;border:1px solid #2d8659}
+  #shareCanvas{display:none}
 
-  /* Theme showcase */
-  .theme-strip{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}
-  .theme-dot{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:600;cursor:default;transition:transform 0.2s}
-  .theme-dot:hover{transform:scale(1.15)}
-  .theme-dot.active{outline:3px solid var(--dark);outline-offset:2px}
-
-  /* Footer */
-  .footer{text-align:center;padding:30px 0 40px;color:var(--text-light);font-size:13px;border-top:1px solid var(--border);margin-top:20px}
-  .footer .theme-note{background:var(--accent);border-radius:10px;padding:12px 20px;margin-bottom:16px;display:inline-block;font-size:13px;color:var(--dark)}
-  .footer a{color:var(--primary);text-decoration:none}
-  .footer a:hover{text-decoration:underline}
-
-  @media(max-width:600px){
-    .hero h1{font-size:26px}
-    .stats{grid-template-columns:repeat(2,1fr)}
-    .news-card{padding:16px}
-  }
+  @media(max-width:600px){.header h1{font-size:22px}.body{padding:18px 16px 32px}}
 </style>
 </head>
 <body>
-
-<!-- Hero -->
-<header class="hero">
-  <div class="container hero-inner">
-    <div class="brand">QIANXUN · OPC DAILY</div>
-    <h1>千寻OPC日报</h1>
-    <div class="subtitle">一人公司(OPC)生态每日动态</div>
-    <div class="meta">
-      <span class="date">2026-08-28</span>
-      <span class="badge">星期五</span>
-      <span class="badge">今日主题：自然绿</span>
-      <span class="badge">第 3/7 套</span>
-    </div>
-  </div>
-</header>
-
-<!-- Stats -->
-<div class="container">
-  <div class="stats">
-    <div class="stat-card"><div class="num">618</div><div class="label">全国OPC社区</div></div>
-    <div class="stat-card"><div class="num">24省</div><div class="label">覆盖省份</div></div>
-    <div class="stat-card"><div class="num">75城</div><div class="label">覆盖城市</div></div>
-    <div class="stat-card"><div class="num">1600万</div><div class="label">一人公司存量</div></div>
-    <div class="stat-card"><div class="num">286万</div><div class="label">上半年新注册</div></div>
-    <div class="stat-card"><div class="num">83%</div><div class="label">AI编程依赖率</div></div>
+<div class="page">
+  <div class="header">
+    <div class="brand">QIANXUN · OPC COMMUNITY</div>
+    <h1>千寻智创OPC社区今日简讯</h1>
+    <div class="date">2026年08月28日 03:03 · 星期五 · 主题：自然绿</div>
+    <div class="count">今日收录 OPC 相关动态 <b>10</b> 条</div>
   </div>
 
-  <!-- 政策动态 -->
-  <section class="section">
-    <h2 class="section-title"><span class="icon">政</span>政策动态</h2>
-
-    <article class="news-card">
-      <span class="cat">政策动态</span>
-      <h3>衢州七部门联合发文：打造长三角知名「OPC友好型城市」，培育10社区+500人才</h3>
-      <div class="info"><span>衢州市发改委等七部门</span><span>2026-08-19</span></div>
-      <p class="summary">衢州市发改委、经信局、科技局、财政局、人社局、数据局、金融监管分局七部门联合印发《衢州市支持人工智能一人公司(OPC)创新发展行动方案》，以建设长三角知名、四省边际领先的「OPC友好型城市」为目标。打造「南孔OPC」城市生态品牌，探索「OPC+化工新材料」产业发展平台，以「链主企业+OPC」模式提供场景对接与科创共享。到2026年底，培育10个具有引领效应的OPC生态社区、集聚OPC创新创业人才500人以上、孵化OPC企业100家以上，初步形成全社会AI技能教育体系，开展专业培训3000人次以上、培养具备OPC创新创业基础的人才1000人以上。</p>
-      <div class="tags"><span class="tag">衢州</span><span class="tag">七部门</span><span class="tag">南孔OPC</span><span class="tag">友好型城市</span><span class="tag">10社区</span></div>
-    </article>
-
-    <article class="news-card">
-      <span class="cat">政策动态</span>
-      <h3>湖北出台「人工智能+OPC」新政12条：最高50万元扶持+2000万算力+500万创业贷</h3>
-      <div class="info"><span>湖北省人民政府</span><span>2026-08-04</span></div>
-      <p class="summary">湖北省印发《支持人工智能OPC发展若干措施(试行)》，从服务、要素、资本、成果转化四方面推出12条硬核措施。服务生态方面，将符合条件的OPC项目纳入省大学生创业扶持项目，给予最高50万元资金扶持；鼓励盘活闲置楼宇打造「OPC生态社区」，成效显著的社区给予单个最高500万元资金支持；提供「210」一站式开办服务(2环节、1日办结、0费用)，建立轻微违法行为容错免罚清单。要素保障上，省级首期安排2000万元用于OPC算力支持，单家OPC最高获3000元卡时或token免费算力、按比例申领最高10万元算力券；依托公共数据开放网设立OPC专区。融资端，最高500万元创业担保贷款及50%财政贴息，楚天凤鸣科创母基金单次最高100万元股权投资。</p>
-      <div class="tags"><span class="tag">湖北</span><span class="tag">12条措施</span><span class="tag">50万扶持</span><span class="tag">2000万算力</span><span class="tag">500万贷款</span></div>
-    </article>
-
-    <article class="news-card">
-      <span class="cat">政策动态</span>
-      <h3>山东宁阳14条硬核举措护航OPC：工位首年全免+算力券50%抵扣+岱宗人才50万</h3>
-      <div class="info"><span>宁阳县人民政府</span><span>2026-08-11</span></div>
-      <p class="summary">宁阳县政府办公室印发《支持人工智能OPC创新发展若干措施(试行)》(宁政办发〔2026〕2号)，有效期至2028年7月，从注册开办、场地安居、算力研发、人才培育、市场拓展、金融配套、综合服务七大维度出台14项扶持举措。创业「零负担」：专属OPC创业社区配套标准化办公工位，首年全额免租、第二三年租金减半，无自有住房从业人员可申请人才公寓首年免租。研发「省大钱」：建设县级OPC社区公共服务平台，发放算力券按企业实际算力支出最高50%抵扣，单家年度补贴上限10万元。人才「有扶持」：入选「岱宗人才工程」创新创业人才最高50万元并享人才贷，青年人才牵头科创项目企业可一次性申领10万元。创新集群注册模式，依托托管机构地址即可完成工商登记。</p>
-      <div class="tags"><span class="tag">宁阳</span><span class="tag">14条</span><span class="tag">工位免租</span><span class="tag">算力券50%</span><span class="tag">岱宗人才</span></div>
-    </article>
-
-    <article class="news-card">
-      <span class="cat">政策动态</span>
-      <h3>陕西印发《指导意见》支持OPC：一址多照+工位注册+信用档案+容错纠错</h3>
-      <div class="info"><span>陕西省市场监管局 / 人民网陕西频道</span><span>2026-08-21</span></div>
-      <p class="summary">陕西省市场监管局印发《关于支持OPC业态创业发展的指导意见》，立足市场监管职能从准入服务、合规指导、信用赋能、监管执法构建服务保障体系。优化登记准入，探索设立OPC登记注册专区、实施「一址多照」「工位注册」；建立OPC经营主体重点培育库、分类精准帮扶；鼓励引导产业园区加强协作。服务保障方面，开辟开办「绿色通道」深化「一站式」政务服务，提供「提前介入、全程指导、跟踪帮扶」全流程服务，搭建服务交流平台及时响应需求；建立「一企一户」专属信用档案，推动跨领域信用结果互认、融资贷款采信。合规风险防控方面，提供电子商务合规指引、直播带货规范靶向服务，探索OPC信用失信风险预警提醒，推行柔性措施给予容错纠错空间，依据信用风险等级确定监管重点和检查频次。建立动态监测机制定期跟踪政策实施成效。</p>
-      <div class="tags"><span class="tag">陕西</span><span class="tag">指导意见</span><span class="tag">一址多照</span><span class="tag">信用档案</span><span class="tag">容错纠错</span></div>
-    </article>
-
-    <article class="news-card">
-      <span class="cat">政策动态</span>
-      <h3>安徽推行「工位注册」「一址多照」：OPC设立一日办结+数据资产入表</h3>
-      <div class="info"><span>安徽省市场监管局、省委金融办 / 国家市场监管总局</span><span>2026-08-05</span></div>
-      <p class="summary">联合印发《关于支持人工智能「一人公司」(OPC)创新创业发展的通知》，依托「皖事通办」打造OPC设立全程网办、一日办结业务闭环，探索AI在企业名称自主申报、经营范围智能匹配、标准化文本自动生成领域应用。精简准入推行「工位注册」——符合物理分割条件的工业厂房、集中办公区、科技孵化器可作OPC住所，入驻OPC社区仅凭工位使用证明即可登记、免产权证明，推行「一址多照」。拓宽出资渠道：支持知识产权、股权、债权等非货币财产作价出资，探索数据资产入表及出资运行路径，破解「有技术缺资金」难点；探索构建AI广告生态联盟，引导OPC向数字广告产业园区集聚；在OPC社区布设质量基础设施「一站式」服务站点，开辟OPC检测认证绿色通道，推动OPC主体参与国家及行业标准制定。</p>
-      <div class="tags"><span class="tag">安徽</span><span class="tag">工位注册</span><span class="tag">一址多照</span><span class="tag">一日办结</span><span class="tag">数据资产入表</span></div>
-    </article>
-  </section>
-
-  <!-- 社区建设 -->
-  <section class="section">
-    <h2 class="section-title"><span class="icon">社</span>社区建设</h2>
-
-    <article class="news-card">
-      <span class="cat">社区建设</span>
-      <h3>南通崇川「数视界」OPC社区启用：首个「AI+数字文化」社区，2.08万㎡+12家企业入驻</h3>
-      <div class="info"><span>国际在线江苏频道</span><span>2026-08-14</span></div>
-      <p class="summary">8月14日，南通数视界OPC社区启用仪式暨崇川区「AI+数字文化」OPC全栈生态平台上线发布会在南通市数字文化产业园举行。该社区是南通首个「AI+数字文化」OPC社区，坐落于崇川区三创大厦，由港闸经济开发区运营，总面积约2.08万平方米，重点聚焦AI动漫游戏、AI泛电商等数字文化细分赛道。社区从政策、载体、服务、技术、资金五大维度构建全流程创业服务生态，提供工商税务代办、政策申报、法律支持、行业资源对接一站式服务，搭建AI技术公共支撑平台聚合大模型能力与智能体工具。活动现场「崇创视界」OPC全栈生态平台同步上线，整合政策申报、算力租赁、供需对接、人才服务、项目孵化全链条功能实现「一网通办」。与南通职业大学签署产教融合合作协议，崇川区政府与南通移动、南通市大数据发展集团及多家OPC社区运营方签署四方战略合作。首批入驻企业12家，覆盖技术研发、数字内容生产、AI场景应用、数字化转型服务。</p>
-      <div class="tags"><span class="tag">南通崇川</span><span class="tag">数视界</span><span class="tag">AI+数字文化</span><span class="tag">2.08万㎡</span><span class="tag">崇创视界</span></div>
-    </article>
-
-    <article class="news-card">
-      <span class="cat">社区建设</span>
-      <h3>广州海珠OPC孵化服务平台启用：腾讯云/阿里云/华为云/火山引擎四大云商集结</h3>
-      <div class="info"><span>中国日报网 / 中国报道网</span><span>2026-08-13</span></div>
-      <p class="summary">8月13日，海珠区AI赋能对接会暨OPC孵化服务平台发布活动在TIT创意园会议中心举办，海珠专属OPC孵化服务平台正式启用。本次活动集结腾讯云、阿里云、华为云、火山引擎四大云服务商，联动润建股份，汇集优质OPC创业主体、赤岗商会及海珠辖区优质企业代表。活动中衍·PANDO AI OPC社区、海珠「数智工坊」孵化社区正式揭牌落地。PANDO社区坐落于珠影大院「有方(UFOUND)」大楼，通过聚合引流、Token服务、金融服务通道、法务税务接口、AI能力展示平台、入孵绿色窗口六大核心板块提供全链路AI赋能服务，已有70余家企业报名、30家AI企业进驻，业务覆盖建筑设计、游戏研发、品牌出海、影视制作、营销咨询。「数智工坊」立足阿里国际站生态，依托自研Accio Work智能体工具赋能，探索「龙头企业给订单、OPC接订单」模式，聚焦跨境电商全链条服务。远霖跨境GoSeaAi搭载23位AI虚拟顾问打通亚马逊/TikTok/Shopee等六大平台。</p>
-      <div class="tags"><span class="tag">海珠</span><span class="tag">孵化平台</span><span class="tag">四大云商</span><span class="tag">PANDO社区</span><span class="tag">数智工坊</span></div>
-    </article>
-
-    <article class="news-card">
-      <span class="cat">社区建设</span>
-      <h3>宿迁「迁动未来·讯飞玲珑OPC社区」试运行：玲珑Agent OS聚合6款大模型，24家企业入驻</h3>
-      <div class="info"><span>宿迁市人民政府 / 宿迁网</span><span>2026-08-15</span></div>
-      <p class="summary">位于宿迁市科技创新产业园的迁动未来·讯飞玲珑OPC社区(「玲珑社区」)试运行。这是科大讯飞集团与地方产业园区合作打造的全国首个OPC社区，规划总面积约7000平方米，产业方向覆盖数字创意、软件开发、电子商务、工业互联网等领域，具备研发办公、创业孵化、产业交流、成果展示功能。支撑数智化运营的核心底座是科大讯飞自主研发的企业级AI原生工作台——玲珑Agent OS，聚合6款主流AI大模型，集成文档处理、智能语音、数据分析能力，搭载法务、财税、研发等领域成熟智能体，支持用户「零代码」调度多种智能体完成复杂任务，不断沉淀业务数据形成企业专属「数字知识库」，安全沙箱和分级权限管控保障企业核心数据安全。社区构建「4+3」全方位陪伴式服务体系：品牌打造、产业培育、技术赋能、人才引育4维度，打通技术对接、市场拓展、资本扶持3条资源链路。截至目前已有24家企业入驻、吸引创业人才近200人。宿迁已印发《OPC创业之城实施方案》《OPC创新发展十条政策措施》。</p>
-      <div class="tags"><span class="tag">宿迁</span><span class="tag">讯飞玲珑</span><span class="tag">Agent OS</span><span class="tag">6款大模型</span><span class="tag">24家企业</span></div>
-    </article>
-  </section>
-
-  <!-- 工具平台 -->
-  <section class="section">
-    <h2 class="section-title"><span class="icon">工</span>工具平台</h2>
-
-    <article class="news-card">
-      <span class="cat">工具平台</span>
-      <h3>连云港海州区「花果山下」OPC社区：悟空智算10607P+算力券免申即享+10亿Tokens配额</h3>
-      <div class="info"><span>连云港市海州区人民政府</span><span>2026-08-20</span></div>
-      <p class="summary">海州区打造「青年AI创业首站城区」，在区级政务服务中心设立OPC注册专属窗口提供一对一帮办代办，依托江苏省企业全链通综合服务平台推行「网上申报、线上流转、并行办理、限时办结」闭环服务；整合供应链金融、2000万元成长基金及「政府赋能股」，已累计为OPC创业者发放融资贷款1350万元。「花果山下」系列OPC社区挂牌运营，覆盖人工智能、悟空智画、智慧安防、数智电商、工业设计、AI+生物医药7大赛道，吸纳130余名单人创业者入驻、落地市场主体42家；同步布局南京、无锡、哈尔滨三地OPC科创飞地，落地注册企业24家，形成「本地深耕+异地拓源」联动格局。海州区「悟空智算」作为江苏省内单体规模最大的智算集群，总算力运营规模达10607P(本地落地算力1054P)，推出「算力券」政策符合条件即可直接享受算力减免。「创客无忧」政策包：入驻企业免费获取3个月主流大模型使用额度，每年叠加10亿Tokens大模型配额。发布AI应用场景清单10个优质落地场景，上线词元2.0自主可控大模型平台启动72城合伙人计划。</p>
-      <div class="tags"><span class="tag">连云港海州</span><span class="tag">花果山下</span><span class="tag">悟空智算</span><span class="tag">10607P</span><span class="tag">10亿Tokens</span></div>
-    </article>
-  </section>
-
-  <!-- 数据洞察 -->
-  <section class="section">
-    <h2 class="section-title"><span class="icon">数</span>数据洞察</h2>
-
-    <article class="news-card">
-      <span class="cat">数据洞察</span>
-      <h3>《2026中国OPC深度洞察报告》：1600万家存量+286万户半年新注册+83%依赖AI编程</h3>
-      <div class="info"><span>WAIC FutureTech / 三个皮匠报告</span><span>2026-08-07</span></div>
-      <p class="summary">WAIC FutureTech发布《2026中国OPC深度洞察报告》，基于595个参赛项目与104份深度问卷还原AI时代一人公司真实生存状态。截至2025年6月，全国一人有限责任公司存量突破1600万家，占全国企业总量27.4%；2025年上半年新注册OPC达286万户、同比增长47%，占全部新注册企业23.8%。2026年上半年全国OPC社区从95个增至618个，覆盖24省75城。技术底层降本显著：达到GPT-3.5水平的模型查询成本从2022年11月每百万Token 20美元降至2024年10月0.07美元，降幅超280倍；JetBrains 2025调查显示85%开发者经常使用AI工具。组织层面，鸿鹄汇估算中位OPC创始人AI月支出39美元、AI开发覆盖率73%，以传统等效开发人力成本1.4%的AI支出获约0.73名全职初中级开发工程师等效工作量。团队形态：1-3人团队构成绝对主体、单人团队超一半，四成以上参与者以非全职创业者身份进入，近两成明确不具备技术背景。商业模式多样化：订阅制44%、佣金/效果付费22%、一次性付费17%。进阶级OPC已实现3到5倍人效增长，个别实现10到100倍增长。</p>
-      <div class="tags"><span class="tag">深度洞察报告</span><span class="tag">1600万存量</span><span class="tag">286万新注册</span><span class="tag">83%AI编程</span><span class="tag">280倍降本</span></div>
-    </article>
-  </section>
-
-  <!-- 主题轮换展示 -->
-  <section class="section">
-    <h2 class="section-title"><span class="icon">色</span>主题轮换 · 共 7 套风格按日轮换</h2>
-    <div class="theme-strip">
-      <div class="theme-dot" style="background:linear-gradient(135deg,#1a73e8,#4285f4)">科技蓝</div>
-      <div class="theme-dot" style="background:linear-gradient(135deg,#e85d04,#fa8322)">活力橙</div>
-      <div class="theme-dot active" style="background:linear-gradient(135deg,#2d8659,#3da876)">自然绿</div>
-      <div class="theme-dot" style="background:linear-gradient(135deg,#7b2d8e,#a855c0)">优雅紫</div>
-      <div class="theme-dot" style="background:linear-gradient(135deg,#4a5568,#718096)">沉稳灰</div>
-      <div class="theme-dot" style="background:linear-gradient(135deg,#c0392b,#e74c3c)">热情红</div>
-      <div class="theme-dot" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">清新青</div>
+  <div class="body" id="capture">
+    <!-- 板块 1 -->
+    <div class="section">
+      <div class="sec-head" style="background:#e85d04"><span class="no">01</span>政务资源与政策同步</div>
+      <div class="card">
+        <div class="num" style="background:#e85d04">1</div>
+        <div class="main">
+          <div class="title"><a href="https://aitoolsrecap.com/Blog/ai-news-august-28-2026" target="_blank" rel="noopener">Token 成本十年降 280 倍：83% OPC 团队依赖 AI 编程</a></div>
+          <div class="desc">WAIC《2026 中国 OPC 深度洞察报告》：模型查询成本三年降幅超 280 倍；85% 开发者常用 AI 工具。鸿鹄汇估算中位 OPC 创始人 AI 月支出 39 美元，以人力成本 1.4% 的支出获约 0.73 名全职工程师等效工作量。</div>
+          <span class="src">来源：WAIC FutureTech / aitoolsrecap</span>
+        </div>
+      </div>
     </div>
-    <p style="margin-top:14px;font-size:13px;color:var(--text-light);line-height:1.6">
-      今日为第 3/7 套「自然绿」(#2d8659)。主题按日序轮换，每日呈现不同视觉风格。<br>
-      下次轮换：08-29 → 优雅紫 · 08-30 → 沉稳灰 · 08-31 → 热情红
-    </p>
-  </section>
+
+    <!-- 板块 2 -->
+    <div class="section">
+      <div class="sec-head" style="background:#1a73e8"><span class="no">02</span>自动产业商机与资源</div>
+      <div class="card">
+        <div class="num" style="background:#1a73e8">1</div>
+        <div class="main">
+          <div class="title"><a href="https://www.163.com/dy/article/L5DIA3060514CQIE.html" target="_blank" rel="noopener">京东「超脑」大模型 3.0：亿级包裹路径规划由分钟级压至秒级</a></div>
+          <div class="desc">京东发布「超脑」大模型 3.0，将亿级包裹路径规划求解时间由分钟级压缩至秒级，覆盖物流全流程；AGIC 2026 深圳展会同期举行，1012 家企业参展、1200 件展品可批量交付。</div>
+          <span class="src">来源：网易 / 中国经济网</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="num" style="background:#1a73e8">2</div>
+        <div class="main">
+          <div class="title"><a href="https://aitoolsrecap.com/Blog/ai-news-august-28-2026" target="_blank" rel="noopener">即梦 AI 推出「即梦片场」：面向影视创作者征集电影/剧集项目</a></div>
+          <div class="desc">即梦 AI 推出影视厂牌「即梦片场」，面向影视公司与 AI 创作者征集电影、剧集项目，提供算力技术与发行全链路支持，打通「AI 生成内容 → 影视工业化交付」的最后一公里。</div>
+          <span class="src">来源：即梦 AI / AI工具快讯</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 板块 3 -->
+    <div class="section">
+      <div class="sec-head" style="background:#2d8659"><span class="no">03</span>一人公司行业动态</div>
+      <div class="card">
+        <div class="num" style="background:#2d8659">1</div>
+        <div class="main">
+          <div class="title"><a href="https://new.qq.com/rain/a/20260828A030Z900" target="_blank" rel="noopener">Anthropic 发布「硬件版 MCP」MHS：Claude 可操控真实实验室设备</a></div>
+          <div class="desc">Anthropic 开放 MHS（模型硬件标准）研究预览，让 Claude 直接读取并操控机械臂、显微镜、量子计算机激光系统等真实硬件；在 QuEra 量子校准中稳定率从 58% 提升至 99.3%。</div>
+          <span class="src">来源：腾讯科技 / 新智元</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="num" style="background:#2d8659">2</div>
+        <div class="main">
+          <div class="title"><a href="https://www.sohu.com/a/1068548964_455313" target="_blank" rel="noopener">Claude Cowork 内置浏览器上线，付费用户可直接操作网页</a></div>
+          <div class="desc">Claude Cowork 内置浏览器正式上线，任务涉及网站操作时可直接调起侧边栏浏览器，完成导航、读取、点击、输入与表单填写；浏览器完全隔离用户自有标签、书签与密码。</div>
+          <span class="src">来源：腾讯研究院 AI 速递</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 板块 4 -->
+    <div class="section">
+      <div class="sec-head" style="background:#7b2d8e"><span class="no">04</span>自动化工具 / 数据趋势</div>
+      <div class="card">
+        <div class="num" style="background:#7b2d8e">1</div>
+        <div class="main">
+          <div class="title"><a href="https://aitoolsrecap.com/Blog/ai-news-august-28-2026" target="_blank" rel="noopener">智谱开源 GLM-5.3-Flash：125B 参数、MIT 许可，中文 AI 芯片运行</a></div>
+          <div class="desc">智谱开放 GLM-5.3-Flash 预览版，采用稀疏+线性注意力混合架构，总参数 125B、每 token 仅激活 6B，原生支持 26 万 token 上下文，支持代码、浏览器与 GUI 协同。</div>
+          <span class="src">来源：智谱 AI / aitoolsrecap</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="num" style="background:#7b2d8e">2</div>
+        <div class="main">
+          <div class="title"><a href="https://new.qq.com/rain/a/20260828A030Z900" target="_blank" rel="noopener">阿里 Qwen3.8-Flash 多模态 MoE：125B / 激活 6B，训练成本降至前代 1/9</a></div>
+          <div class="desc">阿里千问开源基于下一代 Qwen4 架构的预览版 Qwen3.8-Flash-Next，多项基准超 DeepSeek-V4-Flash 与 Claude Opus 4.6，API 每百万 Tokens 输入 ¥1、输出 ¥3。</div>
+          <span class="src">来源：腾讯科技 / 新智元</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="num" style="background:#7b2d8e">3</div>
+        <div class="main">
+          <div class="title"><a href="https://ai-bot.cn/hy-mt2-1-8b/" target="_blank" rel="noopener">腾讯混元 Hy-MT2-1.8B 端侧翻译模型：440MB 落地 B 站直播弹幕</a></div>
+          <div class="desc">腾讯混元推出端侧翻译大模型 Hy-MT2-1.8B，仅 1.8B 参数支持 33 语种互译，通过极致量化压缩至 440MB，可在手机、PC 本地流畅运行，已落地 B 站直播弹幕实时翻译。</div>
+          <span class="src">来源：腾讯混元 / AI工具集</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="num" style="background:#7b2d8e">4</div>
+        <div class="main">
+          <div class="title"><a href="https://ai-bot.cn/pixverse-r2" target="_blank" rel="noopener">爱诗科技 PixVerse R2 实时全模态世界模型：边生成、边交互、边演化</a></div>
+          <div class="desc">PixVerse R2 将视频生成升级为可持续运行的动态世界：支持文本、图像、音频、动作信号多模态输入，注意力稀疏度提升至 90%+，长期亮度漂移指标下降约 35.8%。</div>
+          <span class="src">来源：爱诗科技 / AI工具集</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 板块 5 -->
+    <div class="section">
+      <div class="sec-head" style="background:#eab308"><span class="no">05</span>全国城市 / 社区热点</div>
+      <div class="card">
+        <div class="num" style="background:#eab308">1</div>
+        <div class="main">
+          <div class="title"><a href="https://www.sohu.com/a/1068548964_455313" target="_blank" rel="noopener">英伟达 129 亿美元收购 Hugging Face，押注开放模型生态</a></div>
+          <div class="desc">据 The Information 报道，英伟达已同意以 129 亿美元收购 Hugging Face，价格约合其年化收入的 80 多倍；交易若完成将引发中立性质疑。</div>
+          <span class="src">来源：腾讯研究院 AI 速递</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="num" style="background:#eab308">2</div>
+        <div class="main">
+          <div class="title"><a href="https://www.163.com/dy/article/L5DIA3060514CQIE.html" target="_blank" rel="noopener">AI「超级周」：深圳 AGIC 1012 家企业参展，英伟达 Q2 营收同比 +106%</a></div>
+          <div class="desc">8 月 26–28 日，2026 AGIC 深圳国际通用人工智能产业博览会举行；同期英伟达发布财报：当季总营收 962.2 亿美元，同比 +106%，数据中心营收 890 亿美元。</div>
+          <span class="src">来源：网易 / 中国经济网</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <button class="btn" id="shareImg">📸 生成分享图</button>
+      <button class="btn ghost" id="shareLink">🔗 复制链接</button>
+    </div>
+    <canvas id="shareCanvas"></canvas>
+  </div>
 </div>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="theme-note">今日主题：自然绿 · 共 7 套风格按日轮换</div>
-    <p>千寻OPC日报 · 一人公司(OPC)生态每日动态</p>
-    <p style="margin-top:6px">
-      <a href="https://github.com/fcy123cpu/qianxun-opc-daily" target="_blank">GitHub 仓库</a> ·
-      <a href="https://fcy123cpu.github.io/qianxun-opc-daily/" target="_blank">GitHub Pages 在线预览</a>
-    </p>
-    <p style="margin-top:8px;font-size:11px;opacity:0.7">数据来源：各地政府官网、国家市场监管总局、人民网、中国日报网、国际在线、新华社、复旦大学新闻学院、WAIC FutureTech 等</p>
-  </div>
-</footer>
+<script>
+// ===== 分享图生成（纯前端，无外部依赖，匹配页面视觉） =====
+(function(){
+  function escapeXML(s){
+    return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+  function wrap(text, maxChars){
+    var out=[], line='';
+    for(var i=0;i<text.length;i++){
+      line += text[i];
+      if(line.length>=maxChars){ out.push(line); line=''; }
+    }
+    if(line) out.push(line);
+    return out;
+  }
+  function getBg(el){ return (el.getAttribute('style').match(/background:\s*([^;]+)/)||[])[1] || '#2d8659'; }
 
+  function buildSVG(){
+    var W=760, pad=32, headH=120, secGap=14, cardGap=12, descLH=20, titleLH=20;
+    var sections=[].slice.call(document.querySelectorAll('#capture .section'));
+    var blocks=[];
+    var H=headH+20;
+    sections.forEach(function(sec){
+      var head=sec.querySelector('.sec-head');
+      var bg=getBg(head);
+      var no=head.querySelector('.no').textContent;
+      var name=head.textContent.replace(no,'').trim();
+      blocks.push({type:'sec',no:no,name:name,bg:bg});
+      H+=44+secGap;
+      sec.querySelectorAll('.card').forEach(function(c){
+        var num=c.querySelector('.num').textContent;
+        var nbg=getBg(c.querySelector('.num'));
+        var title=c.querySelector('.title a').textContent;
+        var desc=c.querySelector('.desc').textContent;
+        var src=c.querySelector('.src').textContent;
+        var tlines=wrap(title,30).slice(0,2);
+        var dlines=wrap(desc,46);
+        var h=22+8+tlines.length*titleLH+dlines.length*descLH+26;
+        blocks.push({type:'card',num:num,nbg:nbg,title:tlines,desc:dlines,src:src,h:h});
+        H+=h+cardGap;
+      });
+    });
+    H+=50;
+    var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">';
+    svg+='<rect width="'+W+'" height="'+H+'" fill="#ffffff"/>';
+    // 头部
+    svg+='<rect x="0" y="0" width="'+W+'" height="'+headH+'" fill="#2d8659"/>';
+    svg+='<text x="'+pad+'" y="32" font-size="12" fill="#e8f5ee" font-family="PingFang SC,Microsoft YaHei,Arial" letter-spacing="3">QIANXUN · OPC COMMUNITY</text>';
+    svg+='<text x="'+pad+'" y="68" font-size="28" font-weight="800" fill="#ffffff" font-family="PingFang SC,Microsoft YaHei,Arial">千寻智创OPC社区今日简讯</text>';
+    svg+='<text x="'+pad+'" y="94" font-size="14" fill="#e8f5ee" font-family="PingFang SC,Microsoft YaHei,Arial">2026年08月28日 03:03 · 星期五 · 主题：自然绿</text>';
+    svg+='<rect x="'+pad+'" y="106" width="240" height="26" rx="13" fill="rgba(255,255,255,0.18)"/>';
+    svg+='<text x="'+(pad+14)+'" y="124" font-size="14" font-weight="600" fill="#ffffff" font-family="PingFang SC,Microsoft YaHei,Arial">今日收录 OPC 相关动态 10 条</text>';
+
+    var y=headH+22;
+    blocks.forEach(function(b){
+      if(b.type==='sec'){
+        svg+='<rect x="'+pad+'" y="'+y+'" width="'+(W-2*pad)+'" height="38" rx="10" fill="'+b.bg+'"/>';
+        svg+='<text x="'+(pad+14)+'" y="'+(y+25)+'" font-size="16" font-weight="700" fill="#ffffff" font-family="PingFang SC,Microsoft YaHei,Arial">'+escapeXML(b.no)+' '+escapeXML(b.name)+'</text>';
+        y+=38+secGap;
+      } else {
+        svg+='<rect x="'+pad+'" y="'+y+'" width="'+(W-2*pad)+'" height="'+b.h+'" rx="12" fill="#fcfcfd" stroke="#eceef1"/>';
+        svg+='<rect x="'+pad+'" y="'+y+'" width="30" height="30" rx="8" fill="'+b.nbg+'"/>';
+        svg+='<text x="'+(pad+15)+'" y="'+(y+20)+'" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,Arial">'+escapeXML(b.num)+'</text>';
+        var tx=pad+44, ty=y+19;
+        b.title.forEach(function(t){ svg+='<text x="'+tx+'" y="'+ty+'" font-size="15.5" font-weight="700" fill="#1a73e8" font-family="PingFang SC,Microsoft YaHei,Arial">'+escapeXML(t)+'</text>'; ty+=titleLH; });
+        var dy=ty+2;
+        b.desc.forEach(function(d){ svg+='<text x="'+tx+'" y="'+dy+'" font-size="12.5" fill="#4b5563" font-family="PingFang SC,Microsoft YaHei,Arial">'+escapeXML(d)+'</text>'; dy+=descLH; });
+        svg+='<rect x="'+tx+'" y="'+dy+'" width="'+(b.src.length*8+20)+'" height="20" rx="6" fill="#f1f3f5"/>';
+        svg+='<text x="'+(tx+10)+'" y="'+(dy+14)+'" font-size="12" fill="#6b7280" font-family="PingFang SC,Microsoft YaHei,Arial">'+escapeXML(b.src)+'</text>';
+        y+=b.h+cardGap;
+      }
+    });
+    svg+='<text x="'+pad+'" y="'+(H-20)+'" font-size="12" fill="#9ca3af" font-family="PingFang SC,Microsoft YaHei,Arial">fcy123cpu.github.io/qianxun-opc-daily</text>';
+    svg+='</svg>';
+    return svg;
+  }
+
+  document.getElementById('shareImg').addEventListener('click', function(){
+    var svg=buildSVG();
+    var img=new Image();
+    img.onload=function(){
+      var canvas=document.getElementById('shareCanvas');
+      canvas.width=img.width; canvas.height=img.height;
+      var ctx=canvas.getContext('2d');
+      ctx.drawImage(img,0,0);
+      canvas.toBlob(function(blob){
+        var url=URL.createObjectURL(blob);
+        var a=document.createElement('a');
+        a.href=url; a.download='千寻OPC日报-2026-08-28.png';
+        document.body.appendChild(a); a.click(); a.remove();
+        if(navigator.canShare && navigator.canShare({files:[new File([blob],'opc.png',{type:'image/png'})]})){
+          navigator.share({files:[new File([blob],'opc.png',{type:'image/png'})], title:'千寻OPC日报 2026-08-28'}).catch(function(){});
+        }
+        setTimeout(function(){URL.revokeObjectURL(url);},3000);
+      },'image/png');
+    };
+    img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+  });
+  document.getElementById('shareLink').addEventListener('click', function(){
+    var u='https://fcy123cpu.github.io/qianxun-opc-daily/';
+    if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ alert('链接已复制：'+u); }); }
+    else { alert('链接：'+u); }
+  });
+})();
+</script>
 </body>
 </html>
